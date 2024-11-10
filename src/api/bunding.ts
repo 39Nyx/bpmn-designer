@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export function getPizzaCollaborationBpmn() {
-  return axios.get('/bpmn/pizza-collaboration.bpmn')
+  return axios.get('/bpmn-designer/bpmn/pizza-collaboration.bpmn')
 }
