@@ -7,7 +7,12 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: () => import('../views/BpmnView.vue'),
-    }
+    },
+    {
+      path: '/bundling',
+      name: 'bundling',
+      component: () => import('../views/BundlingView.vue'),
+    },
   ],
 })
 
