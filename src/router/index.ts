@@ -13,6 +13,11 @@ const router = createRouter({
       name: 'bundling',
       component: () => import('../views/BundlingView.vue'),
     },
+    {
+      path: '/color',
+      name: 'color',
+      component: () => import('../views/ColorView.vue'),
+    },
   ],
 })
 
