@@ -16,6 +16,10 @@ import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css'
 
 const container: Ref<null | HTMLDivElement> = ref(null)
 
+/**
+ * 更改颜色通过覆盖层
+ * @param viewer
+ */
 function changeColorByOverlay(viewer: Viewer) {
   const elementRegistry: ElementRegistry = viewer.get<ElementRegistry>('elementRegistry')
   const overlays = viewer.get<Overlays>('overlays')
@@ -36,6 +40,10 @@ function changeColorByOverlay(viewer: Viewer) {
   }
 }
 
+/**
+ * 更改颜色通过modeling扩展
+ * @param viewer
+ */
 function changeColorByExtension(viewer: Viewer) {
   const elementRegistry: ElementRegistry = viewer.get<ElementRegistry>('elementRegistry')
   const elementToColor = elementRegistry.get('SelectAPizzaTask') as Element
@@ -50,6 +58,10 @@ function changeColorByExtension(viewer: Viewer) {
   }
 }
 
+/**
+ * 设置节点的颜色
+ * @param viewer
+ */
 function changeColorByMarker(viewer: Viewer) {
   const canvas = viewer.get<Canvas>('canvas')
   canvas.addMarker('OrderReceivedEvent', 'highlight')
